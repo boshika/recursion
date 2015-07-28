@@ -4,7 +4,22 @@
 // };
 
 // But instead we're going to implement it from scratch:
-var getElementsByClassName = function(className
-){
-  // your code here
+var getElementsByClassName = function(className){
+	var elements = document.body;
+    var stack = [];
+
+    function traverse(node) {
+    	//get all classes and compare with classname,
+    	// if present push to stack
+    	if(node.classList.contains(className)) {
+    		stack.push(node);
+    	}
+    	//recursion to walk through all nodes
+    	for(var i=0; i<node.children.length; i++) {
+    		traverse(node.children[i]);    //recursion
+    	}
+    }
+
+   traverse(elements); 
+   return stack;	
 };
