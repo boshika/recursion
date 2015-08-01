@@ -5,7 +5,7 @@
 
 // But instead we're going to implement it from scratch:
 var getElementsByClassName = function(className){
-	var elements = document.body;
+    var elements = document.body;
     var stack = [];
 
     function traverse(node) {
