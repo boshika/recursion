@@ -17,7 +17,7 @@ var getElementsByClassName = function(className){
     	//recursion to walk through all nodes
     	for(var i=0; i<node.children.length; i++) {
     		var childNode = node.children[i];
-    		traverse(childNode);    //recursion
+    		traverse(childNode);   
     	}
     }
 

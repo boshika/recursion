@@ -25,7 +25,7 @@ var stringifyJSON = function(obj) {
   if (Array.isArray(obj)) {
     return '[' +
       obj.map(function(value) {
-        return stringifyJSON(value)    //recursion
+        return stringifyJSON(value)   
       }).join(",")
       + ']'
   }
@@ -38,7 +38,7 @@ var stringifyJSON = function(obj) {
     	 // if( Object.getOwnPropertyNames(obj[key]).length === 0) {
     	 // 	return {};
     	 // }
-       stack.push( stringifyJSON(key) + ":" + stringifyJSON(obj[key]) );    //recursion
+       stack.push( stringifyJSON(key) + ":" + stringifyJSON(obj[key]) );    
       }
     return "{" + stack + "}"
     }   
