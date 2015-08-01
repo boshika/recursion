@@ -41,6 +41,5 @@ var stringifyJSON = function(obj) {
        stack.push( stringifyJSON(key) + ":" + stringifyJSON(obj[key]) );    
       }
     return "{" + stack + "}"
-    }   
-   
+    }      
 };

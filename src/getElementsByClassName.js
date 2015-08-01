@@ -20,7 +20,6 @@ var getElementsByClassName = function(className){
     		traverse(childNode);   
     	}
     }
-
    traverse(elements); 
    return stack;	
 };
